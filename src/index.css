@@ -1,13 +1,183 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header {
+  background-color: royalblue;
+  display: grid;
+  width: 100%;
+  height: 50px;
+}
+
+header p{
+  color: white;
+  font-size: 22px;
+  justify-self: center;
+  margin-top: 12px;
+}
+
+main {
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+footer {
+  background-color: royalblue;
+  color: white;
+  position: fixed;
+  padding: 10px 10px 0px 10px;
+  width: 100%;
+  bottom: 0;
+  height: 5%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+footer p{
+  margin-bottom: 0.8%;
+}
+
+ul {
+  width: 100%;
+  list-style: none;
+  padding: 0 0.25rem 0.25rem;
+}
+
+ul li::before{
+  content: "\200B";
+}
+
+.item{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  margin: 0.25rem 0;
+  background-color: #fcfcfc;
+  margin-top: 0.5%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+
+.item input[type="checkbox"] {
+  text-align: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  
+}
+
+.item input[type="checkbox"]:focus + label {
+  text-decoration: underline;
+}
+
+.item > label {
+  font-size: 0.75rem;
+  flex-grow: 1;
+  font-size: 15px;
+  color: steelblue;
+  font-weight: bold;
+}
+
+.item svg{
+  width: 48px;
+  min-width: 48px;
+  height: 36px;
+  font-size: 1rem;
+  color: steelblue;
+  cursor: pointer;
+}
+
+.item svg:focus,
+.item svg:hover {
+  color: red;
+  outline: none;
+}
+
+.addForm {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.5rem 0 0;
+  padding: 0 0.5rem 0.25rem;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 2%;
+} 
+
+.addForm label {
+  position: absolute;
+  left: -99999px;
+}
+
+.addForm input[type='text'] {
+  flex-grow: 1;
+  max-width: calc(100% - 50px);
+  min-height: 48px;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  margin-right: 0.25rem;
+  outline: none;
+  border-color: steelblue;
+  border-style: solid;
+  margin-left: 2%;
+  margin-right: 0.5%;
+  padding-left: 1%;
+}
+
+button {
+  height: 48px;
+  min-width: 48px;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: aliceblue;
+  color: mediumblue;
+  cursor: pointer;
+  border-color: steelblue;
+  border-style: solid;
+  margin-right: 2%;
+}
+
+button:focus, 
+button:hover {
+  color: white;
+  background-color: steelblue;
+  outline: none;
+}
+
+.searchForm {
+  width: 20%;
+  display: flex;
+  margin-top: 1.5%;
+  margin-bottom: 2%;
+  margin-left: 78%;
+  
+}
+
+.searchForm input[type='text'] {
+  flex-grow: 1;
+  font-size: 20px;
+  border-radius: 0.25rem;
+  outline: none;
+  padding-left: 8px;
+  font-size: 16px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-color: grey;
+  border-style: solid;
+}
+
+.searchForm input[type='text']::placeholder{
+  color: grey;
 }
