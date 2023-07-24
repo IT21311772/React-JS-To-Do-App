@@ -1,1 +1,1 @@
-This is a simple React To-Do App.
+React To-Do App with add, delete & search functionalities.
